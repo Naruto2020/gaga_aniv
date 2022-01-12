@@ -59,28 +59,104 @@ var bloc1W = 20;
 var bloc1H = 20;
 
 var bulle1 = document.getElementById("bulle1");
-bulle1.style.left = 584 + "px";
-bulle1.style.top = 347 + "px";
+
+if (window.matchMedia("(min-width: 375px) and (max-width: 389px)").matches) {
+  bulle1.style.left = 94 + "px";
+  bulle1.style.top = 250 + "px";
+} else if(window.matchMedia("(min-width: 390px) and (max-width: 411px)").matches) {
+  bulle1.style.left = 94 + "px";
+  bulle1.style.top = 262 + "px";
+}else if(window.matchMedia("(min-width: 412px) and (max-width: 413px)").matches){
+  bulle1.style.left = 94 + "px";
+  bulle1.style.top = 279 + "px";
+} else if(window.matchMedia("(min-width: 414px) and (max-width: 415px)").matches){
+  bulle1.style.left = 94 + "px";
+  bulle1.style.top = 279 + "px";
+}else{
+  bulle1.style.left = 583 + "px";
+  bulle1.style.top = 346 + "px";
+}
+
 var vitesse1X = 5;
 var vitesse1Y = 0;
 
 var bulle2 = document.getElementById("bulle2");
-bulle2.style.left = 745 + "px";
-bulle2.style.top = 675 + "px";
+
+if (window.matchMedia("(min-width: 375px) and (max-width: 389px)").matches) {
+  bulle2.style.left = 165 + "px";
+  bulle2.style.top = 680 + "px";
+}else if(window.matchMedia("(min-width: 390px) and (max-width: 411px)").matches) {
+  bulle2.style.left = 180 + "px";
+  bulle2.style.top = 706 + "px";
+}else if(window.matchMedia("(min-width: 412px) and (max-width: 413px)").matches){
+  bulle2.style.left = 180 + "px";
+  bulle2.style.top = 758 + "px";
+} else if(window.matchMedia("(min-width: 414px) and (max-width: 415px)").matches){
+  bulle2.style.left = 180 + "px";
+  bulle2.style.top = 750 + "px";
+}
+
+//bulle2.style.left = 745 + "px";
+//bulle2.style.top = 675 + "px";
 
 var bulle3 = document.getElementById("bulle3");
-bulle3.style.left = 760 + "px";
-bulle3.style.top = 675 + "px";
+
+if (window.matchMedia("(min-width: 375px) and (max-width: 389px)").matches) {
+  bulle3.style.left = 180 + "px";
+  bulle3.style.top = 680 + "px";
+}else if(window.matchMedia("(min-width: 390px) and (max-width: 411px)").matches) {
+  bulle3.style.left = 195 + "px";
+  bulle3.style.top = 706 + "px";
+}else if(window.matchMedia("(min-width: 412px) and (max-width: 413px)").matches){
+  bulle3.style.left = 195 + "px";
+  bulle3.style.top = 758 + "px";
+} else if(window.matchMedia("(min-width: 414px) and (max-width: 415px)").matches){
+  bulle3.style.left = 195 + "px";
+  bulle3.style.top = 750 + "px";
+}
+
+//bulle3.style.left = 760 + "px";
+//bulle3.style.top = 675 + "px";
 
 var bulle4 = document.getElementById("bulle4");
-bulle4.style.left = 775 + "px";
-bulle4.style.top = 675 + "px";
+
+if (window.matchMedia("(min-width: 375px) and (max-width: 389px)").matches) {
+  bulle4.style.left = 195 + "px";
+  bulle4.style.top = 680 + "px";
+}else if(window.matchMedia("(min-width: 390px) and (max-width: 411px)").matches) {
+  bulle4.style.left = 210 + "px";
+  bulle4.style.top = 706 + "px";
+}else if(window.matchMedia("(min-width: 412px) and (max-width: 413px)").matches){
+  bulle4.style.left = 210 + "px";
+  bulle4.style.top = 758 + "px";
+} else if(window.matchMedia("(min-width: 414px) and (max-width: 415px)").matches){
+  bulle4.style.left = 210 + "px";
+  bulle4.style.top = 750 + "px";
+}
+
+//bulle4.style.left = 775 + "px";
+//bulle4.style.top = 675 + "px";
 
 
 
 var tofy = document.getElementById("tofy");
-tofy.style.left = 920 + "px";
-tofy.style.top = 380 + "px";
+
+if (window.matchMedia("(min-width: 375px) and (max-width: 389px)").matches) {
+  tofy.style.left = 248 + "px";
+  tofy.style.top = 380 + "px";
+}else if(window.matchMedia("(min-width: 390px) and (max-width: 411px)").matches) {
+  tofy.style.left = 252 + "px";
+  tofy.style.top = 380 + "px";
+}else if(window.matchMedia("(min-width: 412px) and (max-width: 413px)").matches){
+  tofy.style.left = 268 + "px";
+  tofy.style.top = 380 + "px";
+} else if(window.matchMedia("(min-width: 414px) and (max-width: 415px)").matches){
+  tofy.style.left = 270 + "px";
+  tofy.style.top = 380 + "px";
+}
+
+//tofy.style.left = 920 + "px";
+//tofy.style.top = 380 + "px";
 
 var intervalID1;
 intervalID1 = window.setInterval(function () {
@@ -93,7 +169,7 @@ intervalID1 = window.setInterval(function () {
   //console.log("test : ", bor1L);
 
   //bor1L + vitesse1X <= 550 ||
-  if ( bor1R + vitesse1X >= 888){
+  if ( bor1R + vitesse1X >= 258){
     //vitesse1X = -vitesse1X;
     clearInterval(intervalID1);
     tofy.style.display = "block";
@@ -104,7 +180,7 @@ intervalID1 = window.setInterval(function () {
     //console.log("vit : ", vitesse1X);
     
   } else if (
-    bor1T + vitesse1Y <= 300 ||
+    bor1T + vitesse1Y <= 200 ||
     bor1B + vitesse1Y >= 700
   ) {
     console.log("test : ", bor1T);
