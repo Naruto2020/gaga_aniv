@@ -72,10 +72,11 @@ if (window.matchMedia("(min-width: 375px) and (max-width: 389px)").matches) {
 } else if(window.matchMedia("(min-width: 414px) and (max-width: 415px)").matches){
   bulle1.style.left = 94 + "px";
   bulle1.style.top = 279 + "px";
-}else{
+}
+/*else{
   bulle1.style.left = 583 + "px";
   bulle1.style.top = 346 + "px";
-}
+}*/
 
 var vitesse1X = 5;
 var vitesse1Y = 0;
