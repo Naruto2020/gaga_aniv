@@ -69,10 +69,14 @@ if (window.matchMedia("(min-width: 375px) and (max-width: 389px)").matches) {
 }else if(window.matchMedia("(min-width: 412px) and (max-width: 413px)").matches){
   bulle1.style.left = 94 + "px";
   bulle1.style.top = 279 + "px";
-} else if(window.matchMedia("(min-width: 414px) and (max-width: 415px)").matches){
+} else if(window.matchMedia("(min-width: 414px) and (max-width: 539px)").matches){
   bulle1.style.left = 94 + "px";
   bulle1.style.top = 279 + "px";
+}else if(window.matchMedia("(min-width: 540px) and (max-width: 767px)").matches){
+  bulle1.style.left = 140 + "px";
+  bulle1.style.top = 229 + "px";
 }
+
 /*else{
   bulle1.style.left = 583 + "px";
   bulle1.style.top = 346 + "px";
@@ -95,6 +99,9 @@ if (window.matchMedia("(min-width: 375px) and (max-width: 389px)").matches) {
 } else if(window.matchMedia("(min-width: 414px) and (max-width: 415px)").matches){
   bulle2.style.left = 180 + "px";
   bulle2.style.top = 750 + "px";
+}else if(window.matchMedia("(min-width: 540px) and (max-width: 767px)").matches){
+  bulle2.style.left = 230 + "px";
+  bulle2.style.top = 600 + "px";
 }
 
 //bulle2.style.left = 745 + "px";
@@ -114,6 +121,9 @@ if (window.matchMedia("(min-width: 375px) and (max-width: 389px)").matches) {
 } else if(window.matchMedia("(min-width: 414px) and (max-width: 415px)").matches){
   bulle3.style.left = 195 + "px";
   bulle3.style.top = 750 + "px";
+}else if(window.matchMedia("(min-width: 540px) and (max-width: 767px)").matches){
+  bulle3.style.left = 245 + "px";
+  bulle3.style.top = 600 + "px";
 }
 
 //bulle3.style.left = 760 + "px";
@@ -133,6 +143,9 @@ if (window.matchMedia("(min-width: 375px) and (max-width: 389px)").matches) {
 } else if(window.matchMedia("(min-width: 414px) and (max-width: 415px)").matches){
   bulle4.style.left = 210 + "px";
   bulle4.style.top = 750 + "px";
+}else if(window.matchMedia("(min-width: 540px) and (max-width: 767px)").matches){
+  bulle4.style.left = 260 + "px";
+  bulle4.style.top = 600 + "px";
 }
 
 //bulle4.style.left = 775 + "px";
@@ -154,6 +167,9 @@ if (window.matchMedia("(min-width: 375px) and (max-width: 389px)").matches) {
 } else if(window.matchMedia("(min-width: 414px) and (max-width: 415px)").matches){
   tofy.style.left = 270 + "px";
   tofy.style.top = 380 + "px";
+}else if(window.matchMedia("(min-width: 540px) and (max-width: 767px)").matches){
+  tofy.style.left = 370 + "px";
+  tofy.style.top = 350 + "px";
 }
 
 //tofy.style.left = 920 + "px";
@@ -170,16 +186,24 @@ intervalID1 = window.setInterval(function () {
   //console.log("test : ", bor1L);
 
   //bor1L + vitesse1X <= 550 ||
-  if ( bor1R + vitesse1X >= 258){
-    //vitesse1X = -vitesse1X;
+  /*if(window.matchMedia("(min-width: 540px) and (max-width: 767px)").matches){
+    if ( bor1R + vitesse1X >= 358){
+      clearInterval(intervalID1);
+      tofy.style.display = "block";
+      bulle2.style.display = "block";
+      bulle3.style.display = "block";
+      bulle4.style.display = "block";
+    }
+  }else*/ 
+  if ( bor1R + vitesse1X >= 258 ){
+    //vitesse1X = -vitesse1X;   
     clearInterval(intervalID1);
     tofy.style.display = "block";
     bulle2.style.display = "block";
     bulle3.style.display = "block";
     bulle4.style.display = "block";
-
     //console.log("vit : ", vitesse1X);
-    
+
   } else if (
     bor1T + vitesse1Y <= 200 ||
     bor1B + vitesse1Y >= 700
